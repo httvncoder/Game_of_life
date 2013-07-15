@@ -14,7 +14,7 @@
  *  
  *  Hit S1 to increase to the next generation
  *  Hit S3 to change the color of the next generations cells
- *  Hit S2 to run in automode (No longer possible to change colors.
+ *  Hit S2 to run in automode (No longer possible to change colors.)
  *
  *  license: CC-BY SA 3.0 - Creative commons share-alike 3.0
  *  use this code however you'd like, just keep this license and
@@ -40,7 +40,7 @@ int myArray[] = {NAVY, BLUE, TEAL, EMERALD, GREEN
                  , RED, MAGENTA, ORANGE, PINK, CORAL
                  , SALMON, ORANGE, GOLD, YELLOW, WHITE}; // avilible colors of cells
 int buttons[3] = {3, 4, 5};  // S1 = 3, S2 = 4, S3 = 5 buttons on the LCD shield
-int autorun = 1;        // Should game runt in automode ? (No when starting up)
+int autorun = 1;        // Should game runt in automode ? (No, when starting up)
 //****************************************************************
 
 
@@ -67,13 +67,13 @@ void initgame() {
  *************************************************************/
 int neighbours(int x, int y) {
  return world[(x + 1) % SIZE][y][0] +
-         world[x][(y + 1) % SIZE][0] +
-         world[(x + SIZE - 1) % SIZE][y][0] +
-         world[x][(y + SIZE - 1) % SIZE][0] +
-         world[(x + 1) % SIZE][(y + 1) % SIZE][0] +
-         world[(x + SIZE - 1) % SIZE][(y + 1) % SIZE][0] +
-         world[(x + SIZE - 1) % SIZE][(y + SIZE - 1) % SIZE][0] +
-         world[(x + 1) % SIZE][(y + SIZE - 1) % SIZE][0];
+        world[x][(y + 1) % SIZE][0] +
+        world[(x + SIZE - 1) % SIZE][y][0] +
+        world[x][(y + SIZE - 1) % SIZE][0] +
+        world[(x + 1) % SIZE][(y + 1) % SIZE][0] +
+        world[(x + SIZE - 1) % SIZE][(y + 1) % SIZE][0] +
+        world[(x + SIZE - 1) % SIZE][(y + SIZE - 1) % SIZE][0] +
+        world[(x + 1) % SIZE][(y + SIZE - 1) % SIZE][0];
 }
 
 /**************************************************************
@@ -168,7 +168,7 @@ void setup() {
 }
 
 /**************************************************************
- * The by arduino required loop
+ * The by arduino required loop()
  *************************************************************/
 void loop() {  
   displaycurgen();
